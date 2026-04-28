@@ -18,7 +18,7 @@ body {
     padding: 20px;
 }
 
-/* Navegación [cite: 38, 52] */
+/* Navegación  */
 .nav-container {
     display: flex;
     justify-content: space-between;
@@ -53,7 +53,7 @@ h1, h2 {
     text-shadow: 0 0 5px var(--terminal-green);
 }
 
-/* Grid de Integrantes [cite: 34, 37] */
+/* Grid de Integrantes*/
 .grid-container {
     display: grid;
     gap: 20px;
@@ -74,7 +74,7 @@ h1, h2 {
     box-shadow: 0 0 10px var(--terminal-green);
 }
 
-/* Botón de Interacción [cite: 73, 74] */
+/* Botón de Interacción */
 .nav-button {
     background-color: transparent;
     border: 1px solid var(--terminal-green);
@@ -90,23 +90,92 @@ h1, h2 {
     color: var(--bg-color);
 }
 
-/* BREAKPOINTS OBLIGATORIOS [cite: 65, 66] */
+/* Perfil y Tarjeta */
+.profile-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
 
-/* Móvil Pequeño (400px) [cite: 67, 71] */
+.profile-card {
+    background: #1a1a1a;
+    border: 1px solid var(--terminal-green);
+    width: 100%;
+    max-width: 800px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.terminal-header {
+    background: #333;
+    padding: 8px 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.dot { height: 12px; width: 12px; border-radius: 50%; display: inline-block; }
+.red { background: #ff5f56; }
+.yellow { background: #ffbd2e; }
+.green { background: #27c93f; }
+.title { color: #ccc; font-size: 0.8rem; margin-left: 10px; }
+
+.profile-content {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px;
+    gap: 30px;
+}
+
+.profile-image img {
+    width: 200px;
+    height: 200px;
+    border: 2px solid var(--terminal-green);
+    filter: grayscale(1) contrast(1.2);
+    object-fit: cover;
+}
+
+.profile-info h1 { margin-top: 0; font-size: 1.5rem; }
+.role { color: var(--text-accent); font-weight: bold; }
+
+.skills {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skills li::before { content: "> "; }
+
+.back-navigation { margin-top: 20px; }
+
+/* Ajuste Responsivo para la Tarjeta */
+@media (max-width: 600px) {
+    .profile-content { flex-direction: column; align-items: center; text-align: center; }
+    .skills { justify-content: center; }
+}
+
+
+/* BREAKPOINTS OBLIGATORIOS  */
+
+/* Móvil Pequeño (400px) */
 @media (min-width: 400px) {
     .grid-container {
         grid-template-columns: 1fr;
     }
 }
 
-/* Tablets (900px) [cite: 68, 71] */
+/* Tablets (900px)  */
 @media (min-width: 900px) {
     .grid-container {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-/* Escritorio (1200px) [cite: 69, 71] */
+/* Escritorio (1200px) */
 @media (min-width: 1200px) {
     .grid-container {
         grid-template-columns: repeat(4, 1fr);
