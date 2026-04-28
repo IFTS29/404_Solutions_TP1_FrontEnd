@@ -1,0 +1,118 @@
+/* Importación de Google Fonts [cite: 60, 95] */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+
+:root {
+    --bg-color: #0a0a0a;
+    --terminal-green: #00ff41;
+    --dark-green: #003b00;
+    --text-accent: #ffffff;
+    --link-color: #008f11;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--terminal-green);
+    font-family: 'JetBrains Mono', monospace;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Navegación [cite: 38, 52] */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--terminal-green);
+    padding-bottom: 10px;
+    margin-bottom: 40px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+}
+
+.nav-links a {
+    color: var(--terminal-green);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.nav-links a:hover {
+    background: var(--terminal-green);
+    color: var(--bg-color);
+}
+
+/* Secciones */
+h1, h2 {
+    color: var(--text-accent);
+    text-shadow: 0 0 5px var(--terminal-green);
+}
+
+/* Grid de Integrantes [cite: 34, 37] */
+.grid-container {
+    display: grid;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card-link {
+    border: 1px solid var(--terminal-green);
+    padding: 15px;
+    text-decoration: none;
+    color: var(--terminal-green);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.card-link:hover {
+    background-color: var(--dark-green);
+    box-shadow: 0 0 10px var(--terminal-green);
+}
+
+/* Botón de Interacción [cite: 73, 74] */
+.nav-button {
+    background-color: transparent;
+    border: 1px solid var(--terminal-green);
+    color: var(--terminal-green);
+    padding: 10px 20px;
+    font-family: inherit;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.nav-button:hover {
+    background-color: var(--terminal-green);
+    color: var(--bg-color);
+}
+
+/* BREAKPOINTS OBLIGATORIOS [cite: 65, 66] */
+
+/* Móvil Pequeño (400px) [cite: 67, 71] */
+@media (min-width: 400px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Tablets (900px) [cite: 68, 71] */
+@media (min-width: 900px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Escritorio (1200px) [cite: 69, 71] */
+@media (min-width: 1200px) {
+    .grid-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    body {
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+}
