@@ -21,9 +21,9 @@
 
 /* Contenedores Multimedia (Inspirado en Mario) */
 .media-section {
-    margin-top: 40px;
-    padding: 20px;
+    
     border-top: 1px dashed var(--terminal-green);
+    padding-top: 1.25rem;
 }
 
 .multimedia-grid {

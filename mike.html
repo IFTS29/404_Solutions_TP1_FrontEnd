@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/styles-mike.css">
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
+<script src="js/main.js"></script>
 
 <body class="terminal-theme">
     <header role="banner">
@@ -43,7 +44,7 @@
                     </div>
                 </div>
 
-                <div class="profile-info">
+                <section class="profile-info">
                     <h1>&gt; Mike</h1>
                     <p class="role">Software & Web Developer Student</p>
                     <hr>
@@ -61,28 +62,46 @@
                     </ul>
 
                     <!-- PELICULAS -->
-                    <div class="media-section">
+                    <section class="media-section">
                         <h3>Películas Favoritas_</h3>
-                        <div class="multimedia-grid">
-                            <div class="media-item">
-                                <img src="img/peli1.jpg" alt="Pelicula 1">
+                        <div class="contenedor-peliculas">
+                            <iframe src="https://www.youtube.com/embed/vKQi3bBA1y8" title="The Matrix Official Trailer"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                            </iframe>
+                            <div class="tarjeta">
                                 <h4>Matrix</h4>
+                                <div class="contenedor">
+                                    <p class="description-peliculas parrafo-expandible parrafo-resumido">
+                                        Neo (Keanu Reeves) es un joven pirata informático que lleva una doble vida:
+                                        durante el día ejerce en una empresa de servicios informáticos, mientras que por
+                                        la noche se dedica a piratear bases de datos y saltarse sistemas de alta
+                                        seguridad. Su vida cambiará cuando una noche conozca a Trinity (Carrie-Anne
+                                        Moss), una misteriosa joven que parece ser una leyenda en el mundo de los
+                                        'hackers' informáticos. Será ella quien lleve a Neo ante su líder: Morfeo
+                                        (Laurence Fishburne). Así descubrirá una terrible realidad y el joven deberá
+                                        decidir si unirse a la resistencia o vivir su vida como hasta ahora. ¿Elegirá
+                                        Neo la pastilla azul o la roja?
+                                    </p>
+                                    <button class="btn-leer" aria-expanded="false">Leer más</button>
+                                </div>
                             </div>
-                            <!-- Repetir para mín. 3 -->
                         </div>
-                    </div>
+                    </section>
 
                     <!-- MUSICA -->
-                    <div class="media-section">
+                    <section class="media-section">
                         <h3>Discos Favoritos_</h3>
-                        <div class="multimedia-grid">
-                            <div class="media-item">
-                                <img src="img/disco1.jpg" alt="Disco 1">
-                                <h4>The Dark Side of the Moon</h4>
-                            </div>
-                            <!-- Repetir para mín. 3 -->
+                        <div class="discos-favoritos">
+                            <figure class="disco-item">
+                                <img src="img/disco1.jpg" alt="Portada de The Dark Side of the Moon de Pink Floyd">
+                                <figcaption>The Dark Side of the Moon</figcaption>
+                            </figure>
+                            <!-- Repetir para cada disco -->
                         </div>
-                    </div>
+
+                    </section>
 
                     <!-- REDES SOCIALES -->
                     <div class="social-links">
@@ -90,7 +109,7 @@
                         <a href="https://www.linkedin.com/in/miguel-flores-3211b398" class="nav-button">LinkedIn</a>
                     </div>
 
-                </div>
+                </section>
             </div><!-- fin de tarjeta de perfil -->
         </article>
 
