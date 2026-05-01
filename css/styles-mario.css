@@ -49,19 +49,57 @@ body {
     color: var(--bg-color);
 }
 
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 20px;
+}
+
 .social-links a {
+    display: flex;
     color: var(--text-accent);
     text-decoration: none;
-    text-transform: uppercase;
     font-size: 0.9rem;
     border: solid 1px red;
     border-radius: 5px;
+    width: 100px;
+    align-items: center;
+    justify-content: center;
 }
 
 .social-links a:hover {
     background: var(--text-accent);
-    color: var(--terminal-red);
+    color: black;
     font-weight: bold;
+}
+
+.icono-github {
+    width: 25px;
+    height: 25px;
+    margin: 5px;
+    filter: brightness(0) invert(1);
+}
+
+.social-links a:hover .icono-github {
+     width: 25px;
+    height: 25px;
+    margin: 5px;
+    filter: brightness(0) invert(0);
+}
+
+.icono-linkedin {
+     width: 25px;
+    height: 25px;
+    margin-left: 2px;
+    filter: brightness(0) invert(1);
+}
+
+.social-links a:hover .icono-linkedin {
+     width: 25px;
+    height: 25px;
+    margin: 5px;
+    filter: brightness(0) invert(0);
 }
 
 /* Secciones */
@@ -175,14 +213,39 @@ h3 {
     object-fit: cover;
 }
 
-.profile-image-mario img {
+.profile-image-mario {
     width: 200px;
     height: 200px;
     border: 2px solid var(--terminal-red);
-    /* filter: grayscale(1) contrast(1.2); */
-    border-radius: 5%;
-    object-fit: cover;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.profile-image-mario img {
+    width: 190px;
+    height: 190px;
+    transform: translate(0, 0) scale(1);
+    animation: volar 3s ease-out forwards;
+}
+
+/* Efecto volar img mario */
+@keyframes volar {
+    0% {
+        transform: translate(200px, -200px) scale(2);
+    }
+
+    30% {
+        transform: translate(30px, -30px) scale(1.1);
+    }
+
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+}
+
+
 
 .profile-info-mario h1 {
     margin-top: 0;
@@ -231,6 +294,96 @@ h3 {
     margin-top: 20px;
 }
 
+/* Habilidades */
+
+.logo-tecnologias {
+    width: 75px;
+    height: 75px;
+}
+
+.logo-tecnologias:hover {
+    filter: grayscale(100%);
+}
+
+.listas {
+    list-style-type: none;
+    /*Esto hace que no se muestren las viñetas*/
+}
+
+.habilidades {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+    /* margin: 20px; */
+}
+
+/* Pantalla para celulares */
+@media (max-width: 480px) {
+    .logo-tecnologias {
+        width: 50px;
+        height: 50px;
+    }
+
+    .habilidades {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 10px;
+    }
+}
+
+
+/* Efecto Disco */
+.disco-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* min-height: 100vh; */
+    /* background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); */
+}
+
+.disco {
+    width: 320px;
+    height: 320px;
+    cursor: pointer;
+    border-radius: 0%;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    transition: all 0.4s ease;
+    /* Sombra interna para efecto de profundidad */
+    filter: drop-shadow(2px 4px 8px rgba(185, 185, 185, 0.3));
+}
+
+/* Hover: se vuelve redonda y gira */
+.disco:hover {
+    border-radius: 50%;
+    animation: girarDisco 0.7s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    /* Sombra más pronunciada al hacer hover */
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.4));
+}
+
+@keyframes girarDisco {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Ajuste Responsivo para la Tarjeta */
 @media (max-width: 600px) {
     .profile-content {
@@ -251,9 +404,10 @@ h3 {
     margin: 20px;
 }
 
-.contenedor-secciones:hover {
-    background-color: rgb(92, 92, 92);
-    border-radius: 5px;
+.contenedor-seccion {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
 .tarjeta p {
@@ -266,6 +420,43 @@ h3 {
     width: 60px;
     height: 60px;
     margin-left: 10px;
+}
+
+/* Habilidades */
+
+.logo-tecnologias {
+    width: 75px;
+    height: 75px;
+}
+
+.logo-tecnologias:hover {
+    filter: grayscale(100%);
+}
+
+.listas {
+    list-style-type: none;
+    /*Esto hace que no se muestren las viñetas*/
+}
+
+.habilidades {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/* Pantalla para celulares */
+@media (max-width: 480px) {
+    .logo-tecnologias {
+        width: 50px;
+        height: 50px;
+    }
+
+    .habilidades {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 10px;
+    }
 }
 
 
