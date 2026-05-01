@@ -1,0 +1,65 @@
+/* Estilos específicos para la página de Mike */
+
+.profile-header-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-data-box {
+    border-left: 2px solid var(--terminal-green);
+    padding-left: 20px;
+    font-size: 1.1rem;
+}
+
+.profile-data-box p {
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+/* Contenedores Multimedia (Inspirado en Mario) */
+.media-section {
+    margin-top: 40px;
+    padding: 20px;
+    border-top: 1px dashed var(--terminal-green);
+}
+
+.multimedia-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.media-item {
+    border: 1px solid #333;
+    padding: 10px;
+    background: #0f0f0f;
+    transition: transform 0.3s ease;
+}
+
+.media-item:hover {
+    border-color: var(--terminal-green);
+    transform: translateY(-5px);
+}
+
+.media-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    filter: grayscale(0.5);
+}
+
+.media-item h4 {
+    margin: 10px 0 5px 0;
+    color: var(--text-accent);
+}
+
+/* Responsividad para pantallas anchas */
+@media (min-width: 900px) {
+    .profile-header-flex {
+        justify-content: flex-start;
+    }
+}
