@@ -93,6 +93,33 @@ iframe {
     font-weight: bold;
 }
 
+/* Discos Favoritos */
+
+.discos-favoritos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 0.9375rem;
+}
+
+.disco-item {
+    margin: 0;
+    text-align: center;
+}
+
+.disco-item img {
+    width: 12.5rem;
+    height: 12.5rem;
+    display: block;
+    object-fit: cover;
+}
+
+.disco-item figcaption {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--text-accent);
+}
+
 /* Responsive: en móvil video arriba, descripción abajo */
 @media (max-width: 600px) {
     .contenedor-peliculas {
