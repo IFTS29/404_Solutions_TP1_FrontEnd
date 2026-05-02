@@ -49,10 +49,153 @@ body {
     color: var(--bg-color);
 }
 
+.contenedor-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 30px;
+    color: var(--text-accent);
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.contenedor-nav ul li a {
+
+    color: var(--text-accent);
+    text-decoration: none;
+}
+
+/* Pantalla Celulares y tablets */
+
+/* Menu Hamburguesa */
+
+@media (min-width: 769px) {
+    .menu-hamburguesa {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .contenedor-nav {
+        display: none;
+    }
+
+    .menu-hamburguesa {
+        z-index: 100;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: right;
+        align-items: center;
+        text-align: center;
+        top: 0px;
+        right: 0px;
+        left: 0px;
+    }
+
+    .img-ico {
+        width: 30px;
+        height: 30px;
+        margin: 5px;
+        filter: brightness(0) invert(1);
+    }
+
+    .nav {
+        z-index: 100;
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 0.5rem;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        background-color: var(--bg-color);
+        padding: 15px;
+        box-shadow: 0 0 0 200vmax rgba(0, 0, 0, 0.7);
+    }
+
+    .nav.visible {
+        z-index: 100;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .two-columns {
+        display: grid;
+        grid-template-columns: 0.5fr 1fr;
+    }
+
+    .nav-list {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        list-style: none;
+        text-align: right;
+        gap: 1rem;
+        right: 1px;
+        font-size: 20px;
+    }
+
+    .nav-list li a {
+        text-decoration: none;
+        color: white;
+        padding: 1rem;
+        padding: 0px;
+        border: solid 1px red;
+        border-radius: 5px;
+        padding: 10px;
+    }
+
+    .nav-list li a:hover {
+        background-color: rgba(204, 204, 204, 0.7);
+    }
+
+    .abrir-menu,
+    .cerrar-menu {
+        display: block;
+        border: 0px;
+        font-size: 1.25rem;
+        background-color: transparent;
+    }
+
+    .abrir-menu {
+        color: black;
+    }
+
+    .cerrar-menu {
+        color: white;
+    }
+
+    .img-abrir {
+        width: 35px;
+        height: 35px;
+    }
+
+    .img-cerrar {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+/* Social links */
+
 .social-links {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+    justify-content: center;
     gap: 20px;
 }
 
@@ -74,6 +217,33 @@ body {
     font-weight: bold;
 }
 
+.links-nav {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 800px;
+    justify-content: space-between;
+}
+
+.links-nav a {
+    display: flex;
+    color: var(--text-accent);
+    text-decoration: none;
+    font-size: 0.9rem;
+    border: solid 1px red;
+    border-radius: 5px;
+    width: 150px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+.links-nav a:hover {
+    background: var(--text-accent);
+    color: black;
+    font-weight: bold;
+}
+
 .icono-github {
     width: 25px;
     height: 25px;
@@ -82,24 +252,40 @@ body {
 }
 
 .social-links a:hover .icono-github {
-     width: 25px;
+    width: 25px;
     height: 25px;
     margin: 5px;
     filter: brightness(0) invert(0);
 }
 
 .icono-linkedin {
-     width: 25px;
+    width: 25px;
     height: 25px;
     margin-left: 2px;
     filter: brightness(0) invert(1);
 }
 
 .social-links a:hover .icono-linkedin {
-     width: 25px;
+    width: 25px;
     height: 25px;
     margin: 5px;
     filter: brightness(0) invert(0);
+}
+
+.contenedor-nav .links-nav a:hover .icono-linkedin {
+    width: 25px;
+    height: 25px;
+    margin: 5px;
+    filter: brightness(0) invert(0);
+}
+
+/* Pantalla para celulares */
+@media (max-width: 480px) {
+    .social-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
 
 /* Secciones */
@@ -198,19 +384,16 @@ h3 {
     margin-left: 10px;
 }
 
+.titulo {
+    margin-left: 30px;
+    margin-top: 50px;
+}
+
 .profile-content {
     display: flex;
     flex-wrap: wrap;
     padding: 30px;
     gap: 30px;
-}
-
-.profile-image img {
-    width: 200px;
-    height: 200px;
-    border: 2px solid var(--terminal-red);
-    filter: grayscale(1) contrast(1.2);
-    object-fit: cover;
 }
 
 .profile-image-mario {
@@ -245,8 +428,6 @@ h3 {
     }
 }
 
-
-
 .profile-info-mario h1 {
     margin-top: 0;
     font-size: 1rem;
@@ -258,6 +439,7 @@ h3 {
 }
 
 .role {
+    font-size: 1.3rem;
     color: var(--text-accent);
     font-weight: bolder;
 }
@@ -267,81 +449,51 @@ h3 {
     grid-template-columns: 1fr 1fr;
 }
 
+@media (max-width: 480px) {
+
+    .dos-columnas {
+        width: 100%;
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .profile-image-mario {
+        display: flex;
+        justify-content: center;
+    }
+
+    .profile-info-mario {
+        display: flex;
+        flex-wrap: wrap;
+        text-align: left;
+        margin-top: 10px;
+    }
+
+    h1 {
+        font-size: 0.7rem;
+    }
+
+
+}
 
 .description {
-    color: var(--text-accent);
-    font-weight: bold;
-}
-
-.skills {
-    color: var(--text-accent);
-    font-weight: bold;
-}
-
-.skills {
-    list-style: none;
-    padding: 0;
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
-}
-
-.skills li::before {
-    content: "> ";
+    width: 100%;
+    color: var(--text-accent);
+    font-weight: bold;
+    text-align: justify;
 }
 
 .back-navigation {
     margin-top: 20px;
 }
 
-/* Habilidades */
-
-.logo-tecnologias {
-    width: 75px;
-    height: 75px;
-}
-
-.logo-tecnologias:hover {
-    filter: grayscale(100%);
-}
-
-.listas {
-    list-style-type: none;
-    /*Esto hace que no se muestren las viñetas*/
-}
-
-.habilidades {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    justify-content: space-between;
-    /* margin: 20px; */
-}
-
-/* Pantalla para celulares */
-@media (max-width: 480px) {
-    .logo-tecnologias {
-        width: 50px;
-        height: 50px;
-    }
-
-    .habilidades {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        margin: 10px;
-    }
-}
-
-
 /* Efecto Disco */
 .disco-container {
     display: grid;
     justify-content: center;
     align-items: center;
-
-    /* min-height: 100vh; */
-    /* background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); */
 }
 
 .disco {
@@ -351,7 +503,6 @@ h3 {
     border-radius: 0%;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
     transition: all 0.4s ease;
-    /* Sombra interna para efecto de profundidad */
     filter: drop-shadow(2px 4px 8px rgba(185, 185, 185, 0.3));
 }
 
@@ -359,7 +510,6 @@ h3 {
 .disco:hover {
     border-radius: 50%;
     animation: girarDisco 0.7s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-    /* Sombra más pronunciada al hacer hover */
     filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.4));
 }
 
@@ -396,18 +546,6 @@ figcaption a:hover {
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 /* Ajuste Responsivo para la Tarjeta */
 @media (max-width: 600px) {
     .profile-content {
@@ -421,17 +559,10 @@ figcaption a:hover {
     }
 }
 
-
 /* Tarjetas */
 
 .tarjeta {
     margin: 20px;
-}
-
-.contenedor-seccion {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
 }
 
 .tarjeta p {
@@ -448,6 +579,25 @@ figcaption a:hover {
 
 /* Habilidades */
 
+.contenedor-seccion {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.habilidades {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.listas {
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0;
+}
+
 .logo-tecnologias {
     width: 75px;
     height: 75px;
@@ -457,32 +607,33 @@ figcaption a:hover {
     filter: grayscale(100%);
 }
 
-.listas {
-    list-style-type: none;
-    /*Esto hace que no se muestren las viñetas*/
-}
-
-.habilidades {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
 /* Pantalla para celulares */
 @media (max-width: 480px) {
-    .logo-tecnologias {
-        width: 50px;
-        height: 50px;
+
+    .contenedor-seccion {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
     }
 
     .habilidades {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
-        margin: 10px;
+        width: 100%;
+        justify-content: space-evenly;
+        padding-left: 0;
     }
-}
 
+    .listas {
+        list-style: none;
+    }
+
+    .logo-tecnologias {
+        width: 50px;
+        height: 50px;
+    }
+
+}
 
 /* Peliculas */
 
@@ -492,8 +643,8 @@ figcaption a:hover {
     border-radius: 10px;
     border: solid 1px whitesmoke;
     margin: 20px;
-    /* background-color: rgb(44, 44, 44); */
     align-items: center;
+    overflow: hidden;
 }
 
 .contenedor-peliculas:hover {
@@ -503,17 +654,8 @@ figcaption a:hover {
 
 .description-peliculas {
     color: var(--text-accent);
-    /* font-weight: lighter; */
     font-size: small;
 
-}
-
-.contenedor-iframe {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 20px;
-    align-items: center;
 }
 
 iframe {
@@ -537,7 +679,6 @@ iframe {
     height: 200px;
 }
 
-
 /* Párrafo expandible */
 
 .parrafo-resumido {
@@ -554,7 +695,7 @@ iframe {
 
 .contenedor {
     max-width: 600px;
-    padding: 20px;
+    /* padding: 20px; */
     border-radius: 10px;
 }
 
@@ -577,32 +718,19 @@ iframe {
     font-weight: bold;
 }
 
+/* Pantalla para celulares */
+@media (max-width: 480px) {
 
-
-/* BREAKPOINTS OBLIGATORIOS  */
-
-/* Móvil Pequeño (400px) */
-@media (min-width: 400px) {
-    .grid-container {
+    .contenedor-peliculas {
         grid-template-columns: 1fr;
     }
-}
 
-/* Tablets (900px)  */
-@media (min-width: 900px) {
-    .grid-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-/* Escritorio (1200px) */
-@media (min-width: 1200px) {
-    .grid-container {
-        grid-template-columns: repeat(4, 1fr);
+    .contenedor-peliculas iframe {
+        order: -1;
     }
 
-    body {
-        max-width: 1100px;
-        margin: 0 auto;
+    .tarjeta h3 {
+        margin-top: 0px;
+        margin-bottom: 0px;
     }
 }
