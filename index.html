@@ -50,11 +50,15 @@
                     <span class="button-icon">&gt;_</span> Ejecutar Diagnóstico
                 </button>
             </div>
-            <div class="hero-decoration">
-                <div class="code-lines">
-                    <span class="code-line">// Inicializando sistema...</span>
-                    <span class="code-line">// Cargando módulos...</span>
-                    <span class="code-line">// Estado: <span class="status-ok">OK</span></span>
+            <div class="hero-decoration" id="diagnosticOutput">
+                <div class="terminal-window-header">
+                    <span class="term-dot red"></span>
+                    <span class="term-dot yellow"></span>
+                    <span class="term-dot green"></span>
+                    <span class="term-title">diagnostic.sh</span>
+                </div>
+                <div class="code-lines" id="codeLines">
+                    <span class="terminal-prompt">$</span>
                 </div>
             </div>
         </section>
