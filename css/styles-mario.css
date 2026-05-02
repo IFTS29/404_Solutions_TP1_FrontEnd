@@ -284,6 +284,20 @@ body {
     .social-links {
         display: flex;
         flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .social-links a {
+        display: flex;
+        color: var(--text-accent);
+        text-decoration: none;
+        font-size: 0.8rem;
+        border: solid 1px red;
+        border-radius: 5px;
+        width: 80px;
+        align-items: center;
         justify-content: center;
     }
 }
@@ -387,6 +401,14 @@ h3 {
 .titulo {
     margin-left: 30px;
     margin-top: 50px;
+}
+
+/* Pantalla para celulares */
+@media (max-width: 480px) {
+
+    .titulo {
+        font-size: 1.2rem;
+    }
 }
 
 .profile-content {
@@ -732,5 +754,6 @@ iframe {
     .tarjeta h3 {
         margin-top: 0px;
         margin-bottom: 0px;
+        font-size: 1rem;
     }
 }
