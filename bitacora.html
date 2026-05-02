@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitácora - 404 Solutions</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/logo404solution.ico" type="image/x-icon" />
+</head>
+
+<body class="terminal-theme">
+    <header>
+        <nav class="nav-container">
+            <div class="logo">404_SOLUTIONS_</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="bitacora.html" class="active">Bitácora</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="bitacora">
+            <h1>&gt; Bitácora del Proyecto_</h1>
+            <p>Registro del proceso de desarrollo del TP1 - Proyecto Web en Equipo</p>
+
+            <article class="bitacora-entry">
+                <h2>&gt; Decisiones de Diseño_</h2>
+                <ul>
+                    <li><strong>Estética Terminal/Hacker:</strong> Decidimos adoptar una estética de terminal de comandos con colores verde neón (#00ff41) sobre fondo oscuro (#0a0a0a) para darle un aspecto técnico y moderno al proyecto.</li>
+                    
+                    <li><strong>Tipografía:</strong> Utilizamos la fuente "JetBrains Mono" de Google Fonts, una fuente monoespaciada que refuerza la estética de terminal y mejora la legibilidad del código.</li>
+                    
+                    <li><strong>Estructura de Navegación:</strong> Implementamos un header consistente en todas las páginas con el logo "404_SOLUTIONS_" y enlaces a Inicio y Bitácora, asegurando que el usuario nunca necesite usar el botón "Atrás" del navegador.</li>
+                    
+                    <li><strong>Páginas Individuales:</strong> Cada integrante tiene libertad creativa en su página personal, manteniendo la coherencia en header y footer pero permitiendo estilos únicos en el contenido principal.</li>
+                    
+                    <li><strong>Responsive Design:</strong> Implementamos breakpoints en 400px, 900px y 1200px para asegurar una experiencia óptima en móviles, tablets y escritorio.</li>
+                </ul>
+            </article>
+
+            <article class="bitacora-entry">
+                <h2>&gt; Dificultades Encontradas y Soluciones_</h2>
+                <ul>
+                    <li><strong>Problema:</strong> Inconsistencias en el header entre diferentes páginas.
+                        <br><strong>Solución:</strong> Estandarizamos la estructura HTML del header y creamos estilos CSS específicos para asegurar que el logo y los enlaces tengan el mismo color (#00ff41) en todas las páginas.</li>
+                    
+                    <li><strong>Problema:</strong> El footer de una página tenía un diseño complejo diferente al resto.
+                        <br><strong>Solución:</strong> Simplificamos el footer para que todas las páginas tengan la misma estructura: "&copy; [año] IFTS N.°29 - 404 Solutions" con año dinámico mediante JavaScript.</li>
+                    
+                    <li><strong>Problema:</strong> Estructura HTML incorrecta con elementos fuera del body.
+                        <br><strong>Solución:</strong> Reorganizamos la estructura HTML para que todos los elementos visibles estén dentro del &lt;body&gt; y seguir las buenas prácticas de HTML5.</li>
+                    
+                    <li><strong>Problema:</strong> Organización de archivos CSS y JS.
+                        <br><strong>Solución:</strong> Creamos carpetas separadas (css/, js/, img/) y organizamos todos los recursos de manera clara y estructurada.</li>
+                    
+                    <li><strong>Problema:</strong> Funcionalidad de párrafos expandibles en las descripciones de películas.
+                        <br><strong>Solución:</strong> Implementamos JavaScript con event listeners para alternar entre estados "resumido" y "completo" mediante clases CSS.</li>
+                </ul>
+            </article>
+
+            <article class="bitacora-entry">
+                <h2>&gt; Cambios Importantes Durante la Implementación_</h2>
+                <ul>
+                    <li><strong>Unificación del Header:</strong> Inicialmente cada página tenía un header ligeramente diferente. Se estandarizó la estructura y los colores para mantener consistencia visual.</li>
+                    
+                    <li><strong>Simplificación del Footer:</strong> Se eliminó un footer complejo con redes sociales y se adoptó un footer minimalista uniforme en todas las páginas.</li>
+                    
+                    <li><strong>Botones de Navegación:</strong> Se agregaron botones "_VOLVER_AL_INICIO" en todas las páginas individuales para cumplir con el requerimiento de navegación sin usar el botón "Atrás" del navegador.</li>
+                    
+                    <li><strong>Año Dinámico:</strong> Se implementó JavaScript para actualizar automáticamente el año en el footer, evitando tener que modificar manualmente el código cada año.</li>
+                    
+                    <li><strong>Accesibilidad:</strong> Se agregaron atributos ARIA (role="banner", role="contentinfo", aria-label) para mejorar la accesibilidad del sitio.</li>
+                    
+                    <li><strong>Interactividad JavaScript:</strong> Se implementaron funciones dinámicas como:
+                        <ul>
+                            <li>Botón de diagnóstico en la portada con alert</li>
+                            <li>Párrafos expandibles en descripciones de películas</li>
+                            <li>Actualización dinámica del año en el footer</li>
+                        </ul>
+                    </li>
+                </ul>
+            </article>
+
+            <article class="bitacora-entry">
+                <h2>&gt; Tecnologías y Herramientas Utilizadas_</h2>
+                <ul>
+                    <li><strong>HTML5:</strong> Estructura semántica del sitio</li>
+                    <li><strong>CSS3:</strong> Estilos, animaciones y diseño responsive</li>
+                    <li><strong>JavaScript:</strong> Interactividad y funciones dinámicas</li>
+                    <li><strong>Google Fonts:</strong> Tipografía JetBrains Mono</li>
+                    <li><strong>Git/GitHub:</strong> Control de versiones y colaboración</li>
+                    <li><strong>Vercel:</strong> Despliegue y hosting del proyecto</li>
+                    <li><strong>IA (Kiro/Claude):</strong> Asistencia en debugging, optimización de código y resolución de problemas técnicos</li>
+                </ul>
+            </article>
+
+            <article class="bitacora-entry">
+                <h2>&gt; Próximos Pasos (TP2)_</h2>
+                <p>Esta bitácora se ampliará en el TP2 con:</p>
+                <ul>
+                    <li>Nuevas funcionalidades implementadas</li>
+                    <li>Mejoras en la interactividad</li>
+                    <li>Optimizaciones de rendimiento</li>
+                    <li>Feedback recibido y cambios aplicados</li>
+                    <li>Evolución del diseño y la experiencia de usuario</li>
+                </ul>
+            </article>
+        </section>
+
+        <div class="back-navigation">
+            <a href="index.html" class="nav-button">_VOLVER_AL_INICIO</a>
+        </div>
+    </main>
+
+    <footer role="contentinfo">
+        <p>&copy; <span id="year"></span> IFTS N.°29 - 404 Solutions</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

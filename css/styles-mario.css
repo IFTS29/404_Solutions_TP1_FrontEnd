@@ -336,9 +336,10 @@ h3 {
 
 /* Efecto Disco */
 .disco-container {
-    display: flex;
+    display: grid;
     justify-content: center;
     align-items: center;
+
     /* min-height: 100vh; */
     /* background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); */
 }
@@ -361,6 +362,29 @@ h3 {
     /* Sombra más pronunciada al hacer hover */
     filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.4));
 }
+
+figcaption {
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    color: var(--text-accent);
+}
+
+figcaption a {
+    color: var(--text-accent);
+    text-decoration: none;
+    margin-left: 0.4rem;
+    border: 1px solid var(--terminal-red);
+    padding: 0.1rem 0.3rem;
+    border-radius: 3px;
+    font-size: 0.75rem;
+    vertical-align: top;
+}
+
+figcaption a:hover {
+    background: var(--text-accent);
+    color: var(--bg-color);
+}
+
 
 @keyframes girarDisco {
     0% {
