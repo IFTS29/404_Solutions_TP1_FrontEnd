@@ -130,10 +130,22 @@ header[role="banner"] .nav-links a:focus-visible {
 #nav-principal {
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 50;
   background: rgba(5, 5, 8, 0.95);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border-accent);
+}
+
+/* Asegurar que el menú hamburguesa esté por encima */
+@media (max-width: 768px) {
+  .menu-hamburguesa,
+  .nav {
+    z-index: 200 !important;
+  }
+  
+  #nav-principal {
+    z-index: 50;
+  }
 }
 
 .nav-inner {
