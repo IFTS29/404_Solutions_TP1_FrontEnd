@@ -103,7 +103,7 @@ header {
 }
 
 @media (min-width: 769px) {
-  .menu-hamburguesa {
+  .menu-hamburguesa, .oculto {
     display: none;
   }
 }
