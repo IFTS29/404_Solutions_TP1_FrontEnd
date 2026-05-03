@@ -27,6 +27,7 @@
     <!-- <<< ----------- * ----------- Navbar ----------- * ----------- >>> -->
     <nav class="contenedor-nav">
         <ul class="links-nav">
+
             <li><a href="#sobre-mi"><img class="icono-linkedin" src="./img/iconos-mario/usuario.png" alt="linkedin" />
                     Sobre Mí_</a></li>
             <li><a href="#habilidades"><img class="icono-linkedin" src="./img/iconos-mario/colaboracion.png"
@@ -50,6 +51,14 @@
         <nav class="nav" id="nav">
             <button id="cerrar" class="cerrar-menu"><img class="img-cerrar" src="/img/iconos-mario/cerrar.png"
                     alt="cerrar"></button>
+            <ul class="nav-list">
+                <li><a href="index.html" class="two-columns"><img class="img-ico" src="/img/iconos-mario/boton-de-inicio.png"
+                    alt="inicio">Inicio_</a></li>
+            </ul>
+            <ul class="nav-list">
+                <li><a href="bitacora.html" class="two-columns"><img class="img-ico" src="/img/iconos-mario/editar.png"
+                    alt="bitacora">Bitácora_</a></li>
+            </ul>
             <ul class="nav-list">
                 <li><a href="#sobre-mi" class="two-columns"><img class="img-ico" src="/img/iconos-mario/usuario.png"
                             alt="sobre-mi">Sobre Mí_</a></li>
@@ -441,41 +450,37 @@
     <!-- <<< ----------- * ----------- Footer ----------- * ----------- >>> -->
 
     <footer class="main-footer">
-      <div class="footer-contenido">
-        <div class="footer-info">
-          <p class="footer-copy">
-            &copy; <span id="year"></span> IFTS N.°29 - Equipo 404 Solutions
-          </p>
-          <p class="licencia">
-            <span class="verde-fuerte">// {</span>
-            <span class="texto-opaco">Proyecto Académico</span>
-            <span class="verde-fuerte">}</span>
-            <span class="texto-opaco">- Desarrollo Web FrontEnd_</span>
-          </p>
+        <div class="footer-contenido">
+            <div class="footer-info">
+                <p class="footer-copy">
+                    &copy; <span id="year"></span> IFTS N.°29 - Equipo 404 Solutions
+                </p>
+                <p class="licencia">
+                    <span class="verde-fuerte">// {</span>
+                    <span class="texto-opaco">Proyecto Académico</span>
+                    <span class="verde-fuerte">}</span>
+                    <div class="texto-opaco">Desarrollo Web FrontEnd</div>
+                </p>
+            </div>
+
+            <div class="footer-redes">
+                <a href="https://github.com/IFTS29/404_Solutions_TP1_FrontEnd" target="_blank" class="enlace-repo"
+                    aria-label="Repositorio GitHub del Grupo">
+                    <i class="fa-brands fa-github"></i>
+                    <span class="verde-fuerte">&gt;&gt;</span>
+                    <span class="texto-opaco">Ver Repositorio</span>
+                </a>
+            </div>
         </div>
 
-        <div class="footer-redes">
-          <a
-            href="https://github.com/IFTS29/404_Solutions_TP1_FrontEnd"
-            target="_blank"
-            class="enlace-repo"
-            aria-label="Repositorio GitHub del Grupo"
-          >
-            <i class="fa-brands fa-github"></i>
-            <span class="verde-fuerte">&gt;&gt;</span>
-            <span class="texto-opaco">Ver Repositorio</span>
-          </a>
+        <div class="btn-subir-container">
+            <a href="#" aria-label="Volver arriba" class="btn-subir">
+                <i class="fa-solid fa-chevron-up"></i>
+            </a>
         </div>
-      </div>
-
-      <div class="btn-subir-container">
-        <a href="#" aria-label="Volver arriba" class="btn-subir">
-          <i class="fa-solid fa-chevron-up"></i>
-        </a>
-      </div>
     </footer>
 
-<!-- <<< ----------- * ----------- Scripts ----------- * ----------- >>> -->
+    <!-- <<< ----------- * ----------- Scripts ----------- * ----------- >>> -->
     <script src="js/script-mario.js"></script>
 </body>
 

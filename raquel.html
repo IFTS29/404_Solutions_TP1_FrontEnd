@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,11 +21,12 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Syne:wght@400;600;700;800&display=swap"
     rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/styles-raq.css">
   <link rel="icon" href="img/logo404solution.ico" type="image/x-icon" />
 </head>
+
 <body>
   <!-- HEADER DE NAVEGACIÓN -->
   <header role="banner">
@@ -36,8 +38,31 @@
       </ul>
     </nav>
   </header>
+
+  <!-- <<< ----------- * ----------- Header Celular ----------- * ----------- >>> -->
+
+  <!-- <<< ----------- Menu Hamburguesa ----------- >>> -->
+
+  <header class="dos-columnas">
+    <a href="index.html" class="logo">404_SOLUTIONS_</a>
+    <div class="menu-hamburguesa">
+      <!-- <<< ----------- Boton Menu Hamburguesa ----------- >>> -->
+      <button id="abrir" class="abrir-menu"><img class="img-abrir" src="/img/iconos-mario/menu.png" alt="menu"></button>
+      <nav class="nav" id="nav">
+        <button id="cerrar" class="cerrar-menu"><img class="img-cerrar" src="/img/iconos-mario/cerrar.png"
+            alt="cerrar"></button>
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Inicio</a></li>
+        </ul>
+        <ul class="nav-links">
+          <li><a href="bitacora.html" class="active">Bitácora</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
   <!-- NAV: menú sticky estilo terminal con numeración de secciones -->
-  <nav id="nav-principal" aria-label="Navegación principal">
+  <nav class="nav-principal" id="nav-principal" aria-label="Navegación principal">
     <div class="nav-inner">
       <span class="nav-label" aria-hidden="true">// NAVEGAR</span>
       <ul>
@@ -48,6 +73,7 @@
       </ul>
     </div>
   </nav>
+
   <main class="profile-main">
     <article class="profile-card" aria-label="Perfil de Raquel">
       <div class="terminal-header">
@@ -227,7 +253,8 @@
                   a la tecnología descontrolada y el poder de la resistencia humana. Pura tensión y atmósfera cyberpunk.
                 </p>
                 <span class="movie-tag">Dir. James Cameron</span>
-                <a href="https://www.youtube.com/watch?v=k64P4l2Wmeg" target="_blank" rel="noopener noreferrer" class="card-link">Ver Trailer</a>
+                <a href="https://www.youtube.com/watch?v=k64P4l2Wmeg" target="_blank" rel="noopener noreferrer"
+                  class="card-link">Ver Trailer</a>
               </div>
             </article>
 
@@ -245,7 +272,8 @@
                   relevante décadas después. Influenció toda una generación de ciencia ficción.
                 </p>
                 <span class="movie-tag">Dir. Mamoru Oshii</span>
-                <a href="https://www.youtube.com/watch?v=SvBVDibOrgs" target="_blank" rel="noopener noreferrer" class="card-link">Ver Trailer</a>
+                <a href="https://www.youtube.com/watch?v=SvBVDibOrgs" target="_blank" rel="noopener noreferrer"
+                  class="card-link">Ver Trailer</a>
               </div>
             </article>
 
@@ -263,7 +291,8 @@
                   Un film que cambió la forma de hacer y pensar el cine de acción.
                 </p>
                 <span class="movie-tag">Dir. Lana y Lilly Wachowski</span>
-                <a href="https://www.youtube.com/watch?v=vKQi3bBA1y8" target="_blank" rel="noopener noreferrer" class="card-link">Ver Trailer</a>
+                <a href="https://www.youtube.com/watch?v=vKQi3bBA1y8" target="_blank" rel="noopener noreferrer"
+                  class="card-link">Ver Trailer</a>
               </div>
             </article>
           </div>
@@ -289,8 +318,10 @@
                 <h3 class="disco-title">Metallica</h3>
                 <p class="disco-artist">Metallica</p>
                 <p class="disco-year">1991</p>
-                <p class="disco-desc">El álbum negro que definió una era. Enter Sandman, Nothing Else Matters, Sad But True.</p>
-                <a href="https://www.youtube.com/watch?v=xnKhsTXoKCI&list=PLxzSZG7g8c8y8Q4figxpJE7JCxZnKFnxl" target="_blank" rel="noopener noreferrer" class="card-link">Escuchar</a>
+                <p class="disco-desc">El álbum negro que definió una era. Enter Sandman, Nothing Else Matters, Sad But
+                  True.</p>
+                <a href="https://www.youtube.com/watch?v=xnKhsTXoKCI&list=PLxzSZG7g8c8y8Q4figxpJE7JCxZnKFnxl"
+                  target="_blank" rel="noopener noreferrer" class="card-link">Escuchar</a>
               </div>
             </article>
 
@@ -306,8 +337,10 @@
                 <h3 class="disco-title">The Number of the Beast</h3>
                 <p class="disco-artist">Iron Maiden</p>
                 <p class="disco-year">1982</p>
-                <p class="disco-desc">El debut de Bruce Dickinson. Run to the Hills, Hallowed Be Thy Name. Metal épico.</p>
-                <a href="https://www.youtube.com/watch?v=WxnN05vOuSM&list=PLxzSZG7g8c8ynC2yHSm5S-SXjY_h5oXE8" target="_blank" rel="noopener noreferrer" class="card-link">Escuchar</a>
+                <p class="disco-desc">El debut de Bruce Dickinson. Run to the Hills, Hallowed Be Thy Name. Metal épico.
+                </p>
+                <a href="https://www.youtube.com/watch?v=WxnN05vOuSM&list=PLxzSZG7g8c8ynC2yHSm5S-SXjY_h5oXE8"
+                  target="_blank" rel="noopener noreferrer" class="card-link">Escuchar</a>
               </div>
             </article>
 
@@ -324,7 +357,8 @@
                 <p class="disco-artist">Black Sabbath</p>
                 <p class="disco-year">1970</p>
                 <p class="disco-desc">Los padres del heavy metal. War Pigs, Iron Man, Paranoid. Oscuro y pesado.</p>
-                <a href="https://www.youtube.com/watch?v=uk_wUT1CvWM&list=PLxzSZG7g8c8yCXF-6mv7Nn5pLMZmXVXVZ" target="_blank" rel="noopener noreferrer" class="card-link">Escuchar</a>
+                <a href="https://www.youtube.com/watch?v=uk_wUT1CvWM&list=PLxzSZG7g8c8yCXF-6mv7Nn5pLMZmXVXVZ"
+                  target="_blank" rel="noopener noreferrer" class="card-link">Escuchar</a>
               </div>
             </article>
 
@@ -339,15 +373,17 @@
                 <h3 class="disco-title">Destroyer</h3>
                 <p class="disco-artist">KISS</p>
                 <p class="disco-year">1976</p>
-                <p class="disco-desc">Rock teatral en su máxima expresión. Detroit Rock City, God of Thunder, Shout It Out Loud.</p>
-                <a href="https://www.youtube.com/watch?v=I2rV8GKhyKs&list=PLxzSZG7g8c8wvKl2e-BxQjBCCx8bT7Qqz" target="_blank" rel="noopener noreferrer" class="card-link">Escuchar</a>
+                <p class="disco-desc">Rock teatral en su máxima expresión. Detroit Rock City, God of Thunder, Shout It
+                  Out Loud.</p>
+                <a href="https://www.youtube.com/watch?v=I2rV8GKhyKs&list=PLxzSZG7g8c8wvKl2e-BxQjBCCx8bT7Qqz"
+                  target="_blank" rel="noopener noreferrer" class="card-link">Escuchar</a>
               </div>
             </article>
 
             <article class="disco-card">
               <div class="disco-cover">
-                <img src="img/discos-raquel/appetite_for_destruction_GNR.jpg" alt="Guns N' Roses - Appetite for Destruction"
-                  class="disco-img" loading="lazy">
+                <img src="img/discos-raquel/appetite_for_destruction_GNR.jpg"
+                  alt="Guns N' Roses - Appetite for Destruction" class="disco-img" loading="lazy">
                 <div class="disco-overlay">
                   <span class="play-icon">▶</span>
                 </div>
@@ -356,8 +392,10 @@
                 <h3 class="disco-title">Appetite for Destruction</h3>
                 <p class="disco-artist">Guns N' Roses</p>
                 <p class="disco-year">1987</p>
-                <p class="disco-desc">Welcome to the Jungle. Sweet Child O' Mine. Paradise City. El debut más explosivo del hard rock.</p>
-                <a href="https://www.youtube.com/watch?v=Rbm6GXllBiw&list=PLxzSZG7g8c8x_SamWaLRWST-U8JLmqKHm" target="_blank" rel="noopener noreferrer" class="card-link">Escuchar</a>
+                <p class="disco-desc">Welcome to the Jungle. Sweet Child O' Mine. Paradise City. El debut más explosivo
+                  del hard rock.</p>
+                <a href="https://www.youtube.com/watch?v=Rbm6GXllBiw&list=PLxzSZG7g8c8x_SamWaLRWST-U8JLmqKHm"
+                  target="_blank" rel="noopener noreferrer" class="card-link">Escuchar</a>
               </div>
             </article>
 
@@ -373,8 +411,10 @@
                 <h3 class="disco-title">Back in Black</h3>
                 <p class="disco-artist">AC/DC</p>
                 <p class="disco-year">1980</p>
-                <p class="disco-desc">El tributo perfecto a Bon Scott. Hard rock puro y directo. Uno de los álbumes más vendidos de la historia.</p>
-                <a href="https://www.youtube.com/watch?v=pAgnJDJN4VA&list=PLxzSZG7g8c8wvKl2e-BxQjBCCx8bT7Qqz" target="_blank" rel="noopener noreferrer" class="card-link">Escuchar</a>
+                <p class="disco-desc">El tributo perfecto a Bon Scott. Hard rock puro y directo. Uno de los álbumes más
+                  vendidos de la historia.</p>
+                <a href="https://www.youtube.com/watch?v=pAgnJDJN4VA&list=PLxzSZG7g8c8wvKl2e-BxQjBCCx8bT7Qqz"
+                  target="_blank" rel="noopener noreferrer" class="card-link">Escuchar</a>
               </div>
             </article>
           </div>
@@ -382,39 +422,36 @@
   </main>
   <!-- FOOTER -->
   <footer class="main-footer">
-      <div class="footer-contenido">
-        <div class="footer-info">
-          <p class="footer-copy">
-            &copy; <span id="year"></span> IFTS N.°29 - Equipo 404 Solutions
-          </p>
-          <p class="licencia">
-            <span class="verde-fuerte">// {</span>
-            <span class="texto-opaco">Proyecto Académico</span>
-            <span class="verde-fuerte">}</span>
-            <span class="texto-opaco">- Desarrollo Web FrontEnd_</span>
-          </p>
-        </div>
-
-        <div class="footer-redes">
-          <a
-            href="https://github.com/IFTS29/404_Solutions_TP1_FrontEnd"
-            target="_blank"
-            class="enlace-repo"
-            aria-label="Repositorio GitHub del Grupo"
-          >
-            <i class="fa-brands fa-github"></i>
-            <span class="verde-fuerte">&gt;&gt;</span>
-            <span class="texto-opaco">Ver Repositorio</span>
-          </a>
-        </div>
+    <div class="footer-contenido">
+      <div class="footer-info">
+        <p class="footer-copy">
+          &copy; <span id="year"></span> IFTS N°29 - Equipo 404 Solutions
+        </p>
+        <p class="licencia">
+          <span class="verde-fuerte">// {</span>
+          <span class="texto-opaco">Proyecto Académico</span>
+          <span class="verde-fuerte">}</span>
+          <div class="texto-opaco">Desarrollo Web FrontEnd_</div>
+        </p>
       </div>
 
-      <div class="btn-subir-container">
-        <a href="#" aria-label="Volver arriba" class="btn-subir">
-          <i class="fa-solid fa-chevron-up"></i>
+      <div class="footer-redes">
+        <a href="https://github.com/IFTS29/404_Solutions_TP1_FrontEnd" target="_blank" class="enlace-repo"
+          aria-label="Repositorio GitHub del Grupo">
+          <i class="fa-brands fa-github"></i>
+          <span class="verde-fuerte">&gt;&gt;</span>
+          <span class="texto-opaco">Ver Repositorio</span>
         </a>
       </div>
-    </footer>
+    </div>
+
+    <div class="btn-subir-container">
+      <a href="#" aria-label="Volver arriba" class="btn-subir">
+        <i class="fa-solid fa-chevron-up"></i>
+      </a>
+    </div>
+  </footer>
   <script src="js/main.js"></script>
 </body>
+
 </html>
