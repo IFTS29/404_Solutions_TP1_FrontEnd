@@ -5,16 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil: Mario David González Benítez</title>
+    <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/styles-mario.css">
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="img/mario.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="icon" href="img/logo404solution.ico" type="image/x-icon" />
 </head>
 
 <body class="terminal-theme">
     <!-- <<< ----------- * ----------- Header Principal ----------- * ----------- >>> -->
     <header>
         <nav class="nav-container">
-            <div class="logo">404_SOLUTIONS_</div>
+            <a href="index.html" class="logo">404_SOLUTIONS_</a>
             <ul class="nav-links">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="bitacora.html">Bitácora</a></li>
@@ -438,8 +440,39 @@
 
     <!-- <<< ----------- * ----------- Footer ----------- * ----------- >>> -->
 
-    <footer>
-        <p>&copy; <span id="year"></span> IFTS N.°29 - 404 Solutions</p>
+    <footer class="main-footer">
+      <div class="footer-contenido">
+        <div class="footer-info">
+          <p class="footer-copy">
+            &copy; <span id="year"></span> IFTS N.°29 - Equipo 404 Solutions
+          </p>
+          <p class="licencia">
+            <span class="verde-fuerte">// {</span>
+            <span class="texto-opaco">Proyecto Académico</span>
+            <span class="verde-fuerte">}</span>
+            <span class="texto-opaco">- Desarrollo Web FrontEnd_</span>
+          </p>
+        </div>
+
+        <div class="footer-redes">
+          <a
+            href="https://github.com/IFTS29/404_Solutions_TP1_FrontEnd"
+            target="_blank"
+            class="enlace-repo"
+            aria-label="Repositorio GitHub del Grupo"
+          >
+            <i class="fa-brands fa-github"></i>
+            <span class="verde-fuerte">&gt;&gt;</span>
+            <span class="texto-opaco">Ver Repositorio</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="btn-subir-container">
+        <a href="#" aria-label="Volver arriba" class="btn-subir">
+          <i class="fa-solid fa-chevron-up"></i>
+        </a>
+      </div>
     </footer>
 
 <!-- <<< ----------- * ----------- Scripts ----------- * ----------- >>> -->
