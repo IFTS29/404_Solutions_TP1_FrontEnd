@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
 const nav = document.querySelector("#nav");
 const abrir = document.querySelector("#abrir");
 const cerrar = document.querySelector("#cerrar");
-const enlaces = document.querySelectorAll(".menu-hamburguesa .nav .nav-list a");
+const enlaces = document.querySelectorAll(".nav .nav-list a");
 
 abrir.addEventListener("click", () => {
     nav.classList.add("visible");

@@ -21,6 +21,12 @@
   margin-bottom: 40px;
 }
 
+@media (max-width: 768px) {
+  .nav-container {
+    display: none;
+  }
+}
+
 .nav-links {
   list-style: none;
   display: flex;
@@ -454,9 +460,17 @@ h3 {
   font-weight: bolder;
 }
 
+/* Pantalla para celulares */
+@media (max-width: 480px) {
+    .role {
+        font-size: 1rem;
+    }
+}
+
 .dos-columnas {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  align-items: center;
 }
 
 @media (max-width: 480px) {

@@ -49,6 +49,16 @@
   margin-bottom: 20px;
 }
 
+@media (max-width: 600px) {
+  .role-subtitle {
+    font-size: 0.8rem;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+}
+
 .tag-verde {
   color: var(--terminal-green);
   font-size: 0.9rem;
@@ -90,6 +100,12 @@
 .profile-data-box p {
   margin: 5px 0;
   font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  .profile-data-box {
+    font-size: 0.8rem;
+  }
 }
 
 .glitch-effect {
@@ -223,6 +239,13 @@
 .skills-terminal li:hover::after {
   opacity: 1;
   animation: blink 1s step-end infinite;
+}
+
+@media (max-width: 600px) {
+  .skills-terminal li i{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 /* --- SECCION PELICULAS --- */
