@@ -24,6 +24,39 @@
     border: none;
 }
 
+/* Barra de navegación del perfil */
+.profile-local-nav {
+    position: sticky;
+    top: 0; /* Se pega al borde superior */
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    background-color: var(--bg-color); /* Fondo negro sólido para que no se transparente el contenido */
+    border-bottom: 0.0625rem solid var(--terminal-green); /* Línea divisoria técnica */
+    z-index: 1000; /* Asegura que siempre esté por encima de las imágenes y videos */
+    padding: 1rem 0;
+    margin-bottom: 2rem;
+}
+
+.profile-local-nav ul {
+    display: flex;
+    justify-content: space-evenly; /* Distribuye los elementos equitativamente */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.profile-local-nav a {    
+    color: var(--terminal-green);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.profile-local-nav a:hover {
+    text-shadow: 0 0 0.5rem var(--terminal-green);
+}
+
+
+
 /* Contenedores Multimedia (al estilo de Mario) */
 /* Grid películas */
 .contenedor-peliculas {
@@ -165,4 +198,12 @@ iframe {
     iframe {
         height: 12rem;
     }
+}
+
+/* Esto evita que el menú tape los títulos al navegar */
+
+section[id], h2[id] {
+
+    scroll-margin-top: 4rem; 
+
 }
