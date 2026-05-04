@@ -1,30 +1,26 @@
-// Función para actualizar el año del copyright de forma dinámica
-document.addEventListener("DOMContentLoaded", () => {
-  const yearSpan = document.getElementById("year");
-  const currentYear = new Date().getFullYear();
-  yearSpan.textContent = currentYear;
-});
-
-// * ------------  * ------------ * ------------ * ------------ * ------------ *
-
+//Menu Hamburguesa
 // Menu Hamburguesa
+// Esperar a que el DOM esté completamente cargado
+document.addEventListener("DOMContentLoaded", function () {
+  console.log("DOM cargado correctamente");
 
-const nav = document.querySelector("#nav");
-const abrir = document.querySelector("#abrir");
-const cerrar = document.querySelector("#cerrar");
-const enlaces = document.querySelectorAll(".nav .nav-list a");
+  const nav = document.querySelector("#nav");
+  const abrir = document.querySelector("#abrir");
+  const cerrar = document.querySelector("#cerrar");
+  const enlaces = document.querySelectorAll(".nav");
 
-abrir.addEventListener("click", () => {
-  nav.classList.add("visible");
-});
+  abrir.addEventListener("click", () => {
+    nav.classList.add("visible");
+  });
 
-cerrar.addEventListener("click", () => {
-  nav.classList.remove("visible");
-});
-
-enlaces.forEach((enlace) => {
-  enlace.addEventListener("click", (e) => {
+  cerrar.addEventListener("click", () => {
     nav.classList.remove("visible");
+  });
+
+  enlaces.forEach((enlace) => {
+    enlace.addEventListener("click", (e) => {
+      nav.classList.remove("visible");
+    });
   });
 });
 
@@ -92,4 +88,13 @@ document.getElementById("btn-interact").addEventListener("click", function () {
   addLine(0);
 
   console.log("Diagnóstico ejecutado correctamente.");
+});
+
+// * ------------  * ------------ * ------------ * ------------ * ------------ *
+
+// Función para actualizar el año del copyright de forma dinámica
+document.addEventListener("DOMContentLoaded", () => {
+  const yearSpan = document.getElementById("year");
+  const currentYear = new Date().getFullYear();
+  yearSpan.textContent = currentYear;
 });
