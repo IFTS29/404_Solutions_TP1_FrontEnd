@@ -50,19 +50,28 @@
 }
 
 @media (max-width: 600px) {
-  .role-subtitle {
-    font-size: 0.8rem;
+  role-subtitle {
+    font-size: 1rem;    
   }
 
   h2 {
-    font-size: 1rem;
+    font-size: 1.2rem;    
+
+  .tag-verde {
+    font-size: 1rem;     
   }
+
+  .code-symbol-green {
+    font-size: 1.2rem;    
+  }
+}
 }
 
 .tag-verde {
   color: var(--terminal-green);
-  font-size: 0.9rem;
+  font-size: 1rem;
   margin-left: 10px;
+  margin-bottom: 0.5rem;
   font-weight: normal;
   text-shadow: 0 0 5px rgba(0, 255, 65, 0.4);
 }
@@ -192,23 +201,26 @@
 .skills-category {
   display: flex;
   flex-direction: column;
+  gap: 12px;
 }
 
 .skills-terminal {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px 35px;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  list-style: none;  
+  gap: 15px 20px;
   font-size: 0.95rem;
   color: var(--color-texto-mutado);
   padding: 0;
   margin: 0;
+  justify-content:center;
 }
 
 .skills-terminal li {
   display: flex;
   align-items: center;
   gap: 12px;
+  white-space: nowrap;
   transition: color 0.3s ease;
   cursor: default;
 }
@@ -242,9 +254,16 @@
 }
 
 @media (max-width: 600px) {
+  
+  .role-subtitle{
+    font-size: 0.8rem;
+  }
+
+  h2 {font-size: 1.3 rem;}
+
   .skills-terminal li i{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
@@ -446,7 +465,29 @@
 
 /* --- BREAKPOINTS --- */
 
-@media (min-width: 400px) {
+@media (min-width: 400px){
+  /* Los estilos solo se aplican desde 400px*/
+  .discos-favoritos{
+    grid-template-columns: 1fr;
+  }
+}
+@media (min-width: 600px) {
+  /* Los estilos solo se aplican desde 400px*/
+  .mariana-secciones {
+    padding: 20px 25px !important;
+  }
+
+  .skills-terminal {
+    grid-template-columns: repeat(3, auto);
+    gap: 15px 40px;
+  }
+
+  .discos-favoritos {
+    grid-template-columns: 1fr 1fr;    
+  }
+}
+
+@media (min-width: 768px) {
   .mariana-secciones {
     padding: 50px 60px !important;
   }
@@ -466,6 +507,10 @@
   .info-personal-basica {
     align-items: flex-start;
     margin-top: 15px;
+  }
+
+  .skills-terminal {
+    grid-template-columns: repeat(4, auto);
   }
 
   .social-links-mariana {
