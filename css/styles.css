@@ -10,6 +10,12 @@
   --surface-color: #333;
 }
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -25,7 +31,11 @@ body {
 
 /* Navegación  */
 header {
+  position:sticky;
+  top:0;
   width: 100%;
+  z-index: 1000;
+  background-color: color-mix(in srgb, var(--bg-color), transparent 20%);  /* transparencia */
 }
 
 .nav-container {
