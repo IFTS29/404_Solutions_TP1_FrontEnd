@@ -1,5 +1,11 @@
 /* Estilos Mike */
 
+h1 {
+    font-size:2.8rem;          
+    margin-bottom: 0;   
+    /* line-height: 1.2;       */
+}
+
 .profile-header-flex {
     display: flex;
     flex-wrap: wrap;
@@ -11,7 +17,7 @@
 .profile-data-box {
     border-left: 1px solid var(--terminal-green); /* 2px */
     padding-left: 1.25rem; /* 20px */
-    font-size: 1.1rem;
+    font-size: 1.3rem;
 }
 
 .profile-data-box p {
@@ -29,9 +35,10 @@
     position: sticky;
     top: 0;
     width: 100%;
-    background-color: var(--bg-color);
+    /* Fondo con transparencia usando RGBA (negro al 80%) */
+    background-color: rgba(0, 0, 0, 0.8);
     border-bottom: 0.0625rem solid var(--terminal-green);
-    z-index: 1000;
+    z-index: 10;
     padding: 0.75rem 0;
     margin-bottom: 2rem;
     overflow-x: auto;
@@ -60,7 +67,7 @@
 .profile-local-nav a {
     color: var(--terminal-green);
     text-decoration: none;
-    font-size: 0.85rem;
+    font-size: 1rem;
 }
 
 .profile-local-nav a:hover {
@@ -81,7 +88,7 @@
 }
 
 .formacion-label {
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: var(--text-accent);
     text-transform: uppercase;
     letter-spacing: 0.1em;
@@ -101,13 +108,13 @@
 }
 
 .tec-nombre {
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     color: var(--text-accent);
     font-weight: bold;
 }
 
 .tec-inst {
-    font-size: 0.78rem;
+    font-size: 0.9rem;
     color: var(--text-accent);
     opacity: 0.5;
 }
@@ -115,7 +122,7 @@
 /* Tags */
 .tag-list { display: flex; flex-wrap: wrap; gap: 0.35rem; list-style: none; padding: 0; margin: 0; }
 .tag {
-    font-size: 0.72rem;
+    font-size: 0.9rem;
     border: 1px solid var(--terminal-green);
     color: var(--terminal-green);
     padding: 0.15rem 0.5rem;
@@ -135,11 +142,11 @@
 }
 .cert-item:last-child { border-bottom: none; }
 
-.cert-name { color: var(--text-accent); font-size: 0.85rem; }
-.cert-org  { font-size: 0.72rem; color: var(--text-accent); opacity: 0.55; margin: 0; }
+.cert-name { color: var(--text-accent); font-size: 1.05rem; }
+.cert-org  { font-size: 1.05rem; color: var(--text-accent); opacity: 0.55; margin: 0; }
 
 .cert-status {
-    font-size: 0.68rem;
+    font-size: 0.85rem;
     padding: 0.2rem 0.55rem;
     border-radius: 3px;
     white-space: nowrap;
@@ -150,19 +157,34 @@
 .status-wip  { border: 1px solid #886600; color: #ffcc44; }
 
 /* --- SECCIÓN DE HABILIDADES (BARRAS XP) --- */
+
+#habilidades {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; /* Esto obliga a los hijos a ocupar todo el ancho */
+}
+
 .habilidades-layout {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem 2rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5rem 2rem;
     list-style: none;
     padding: 0;
+    width: 100%; /* Ocupa todo el espacio del padre */
+    margin: 0 auto;
+}
+
+.skill-item {
+    width: 100%; /* Cada item ocupa el 100% de su celda en la grilla */
+    display: block;
 }
 
 .skill-info {
     display: flex;
     justify-content: space-between;
     margin-bottom: 5px;
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     color: var(--text-accent);
 }
 
@@ -186,9 +208,9 @@
 .ds-note {
     margin-top: 2rem;
     border-left: 3px solid var(--terminal-green);
-    padding: 1rem;
+    padding: 1.2rem;
     background: rgba(0, 255, 65, 0.05);
-    font-size: 0.85rem;
+    font-size: 1rem;
 }
 
 /* Contenedores Multimedia (al estilo de Mario) */
@@ -227,7 +249,7 @@ iframe {
 
 .description-peliculas {
     color: var(--text-accent);
-    font-size: 0.875rem;
+    font-size: 0.9rem;
     text-indent: 1.25rem;
     text-align: justify;
     margin-top: 0.75rem;
@@ -251,7 +273,7 @@ iframe {
     width: 100%;
     color: var(--terminal-green);
     text-transform: uppercase;
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     border: 2px solid var(--terminal-green);
     border-radius: 10px;
     cursor: pointer;
@@ -296,8 +318,8 @@ iframe {
 }
 
 .disco-item figcaption {
-    margin-top: 1rem;
-    font-size: 0.85rem;
+    margin-top: 1.2rem;
+    font-size: 1rem;
     color: var(--text-accent);
 }
 
@@ -308,7 +330,7 @@ iframe {
     border: 1px solid var(--terminal-green);
     padding: 0.1rem 0.3rem;
     border-radius: 3px;
-    font-size: 0.75rem;
+    font-size: 0.85rem;
     vertical-align: top;
 }
 
@@ -317,8 +339,27 @@ iframe {
     color: var(--bg-color);
 }
 
+@media (max-width: 768px) {
+
+    .habilidades-layout {
+    
+    grid-template-columns: 1fr 1fr;
+ 
+    
+}
+/* Esto evita que el menú tape los títulos al navegar */
+
+section[id], h2[id] {
+
+    scroll-margin-top: 4rem; 
+
+}
+
+}
+
 
 /* Responsive: en móvil video arriba, descripción abajo */
+
 @media (max-width: 600px) {
 
     /* Mobile: la tarjeta ocupa todo el ancho disponible,
@@ -363,20 +404,37 @@ iframe {
 
     .cert-status { margin: 0 auto; }
 
-    .nav-root { 
-        font-size: 0;  /* oculta el texto */
+    /* navegador de perfil en mobile */
+
+    .profile-local-nav {        
+        backdrop-filter: blur(4px); /* Efecto de desenfoque opcional para legibilidad */
+        margin-bottom: 1.5rem;
     }
-    .nav-root::before {
-        content: '~/';
-        font-size: 0.85rem;
+
+    .nav-path {
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: center;     
+        justify-items: start;      /* para hacerlo coincidir con el borde inicial */
+        padding: 0.3rem 1.5rem; 
+        gap: 0.6rem 6rem;
+    }
+
+    .nav-root {
+        grid-column: 1 / -1;
+        /* Alineado con el resto de los links */
+        padding-left: 0; 
+        margin-bottom: 0.2rem;
+    }
+
+    .nav-sep {
+        display: none;
+    }
+
+    section[id], h2[id] {
+        scroll-margin-top: 8rem; /* Ajustá este valor según la altura real de tu nav */
     }
 }
 
-/* Esto evita que el menú tape los títulos al navegar */
 
-section[id], h2[id] {
-
-    scroll-margin-top: 4rem; 
-
-}
 
