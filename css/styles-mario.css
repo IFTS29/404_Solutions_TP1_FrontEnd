@@ -74,7 +74,7 @@
 /* Menu Hamburguesa */
 
 @media (min-width: 769px) {
-  .menu-hamburguesa {
+  .menu-hamburguesa, .oculto {
     display: none;
   }
 }
@@ -129,6 +129,7 @@
   .two-columns {
     display: grid;
     grid-template-columns: 0.5fr 1fr;
+    align-items: center;
   }
 
   .nav-list {
@@ -478,6 +479,7 @@ h3 {
     width: 100%;
     grid-template-columns: 1fr;
     justify-items: center;
+    justify-content: space-evenly;
   }
 
   .profile-image-mario {
