@@ -898,6 +898,21 @@ section {
   align-self: center;
 }
 
+.back-navigation {
+  width: 100%;
+  max-width: 50rem;
+  margin: 1.25rem auto 0 auto;
+  text-align: center;
+  padding: 1.25rem;
+}
+
+.back-navigation .nav-button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 0;
+  text-decoration: none;
+}
+
 /* =========================================================
    CONTACTO
    ========================================================= */
@@ -1003,50 +1018,6 @@ section {
   transform: translateX(4px);
 }
 
-/* =========================================================
-   FOOTER
-   ========================================================= */
-
-.back-navigation {
-  text-align: center;
-  padding: 2rem;
-  margin-top: 2rem;
-}
-
-.back-navigation .nav-button {
-  display: inline-block;
-  background: transparent;
-  border: 1px solid #00ff41;
-  color: #00ff41;
-  font-family: var(--font-mono);
-  font-size: 0.85rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  padding: 0.9rem 2rem;
-  text-decoration: none;
-  border-radius: var(--radius);
-  transition: background-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease, transform 0.2s ease;
-}
-
-.back-navigation .nav-button:hover,
-.back-navigation .nav-button:focus-visible {
-  background: #00ff41;
-  color: var(--bg-base);
-  box-shadow: 0 0 20px rgba(0, 255, 65, 0.3);
-  transform: translateY(-2px);
-  outline: none;
-}
-
-footer {
-  color: #00ff41;
-  text-align: left;
-  padding: 1.25rem;
-  margin-top: 1.25rem;
-}
-
-footer p {
-  color: #00ff41;
-}
 
 /* =========================================================
    RESPONSIVIDAD
