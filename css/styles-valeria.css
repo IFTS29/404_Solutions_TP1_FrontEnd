@@ -13,6 +13,7 @@
   --max-width: 1100px;
 }
 
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -26,6 +27,10 @@ body {
   line-height: 1.6;
   padding: 20px;
   overflow-x: hidden;
+}
+
+p{
+  margin-top:0.5rem;
 }
 
 ul {
@@ -146,6 +151,7 @@ h3,
 h4 {
   color: var(--text-accent);
   text-shadow: 0 0 5px var(--terminal-green);
+  margin-top: 1rem;
   margin-bottom: 1rem;
 }
 
@@ -181,6 +187,19 @@ iframe {
   border: 1px solid var(--terminal-green);
   margin-bottom: 10px;
 }
+
+.parrafo-resumido {
+    max-height: calc(1.6em * 3); /* para q no se corte el texto*/
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.parrafo-completo {
+    max-height: 62.5rem;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
 
 /* CARRUSEL MEJORADO */
 .carrusel-container {
