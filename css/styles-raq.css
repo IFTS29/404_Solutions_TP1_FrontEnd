@@ -198,6 +198,16 @@ header[role="banner"] .nav-links a:focus-visible {
   outline: none;
 }
 
+#nav-principal a.nav-section-active {
+  color: var(--green);
+  border-color: var(--green-dim);
+  background: rgba(0, 255, 159, 0.1);
+}
+
+#nav-principal a.nav-section-active .nav-num {
+  color: var(--cyan);
+}
+
 /* =========================================================
    PROFILE CARD (Terminal Window)
    ========================================================= */
@@ -310,6 +320,23 @@ section {
   justify-content: center;
   gap: 1rem;
   margin-top: 2rem;
+}
+
+.profile-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.copy-profile-btn {
+  cursor: pointer;
+  border-style: solid;
+}
+
+.copy-profile-btn.is-copied {
+  border-color: var(--green);
+  color: var(--bg-base);
+  background: var(--green);
 }
 
 .avatar-frame {
