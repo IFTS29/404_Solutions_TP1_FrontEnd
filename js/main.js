@@ -9,6 +9,10 @@ document.addEventListener("DOMContentLoaded", function () {
   const cerrar = document.querySelector("#cerrar");
   const enlaces = document.querySelectorAll(".nav");
 
+  // año
+  const yearSpan = document.getElementById("year");
+  if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+
   abrir.addEventListener("click", () => {
     nav.classList.add("visible");
   });
@@ -91,10 +95,3 @@ document.getElementById("btn-interact").addEventListener("click", function () {
 });
 
 // * ------------  * ------------ * ------------ * ------------ * ------------ *
-
-// Función para actualizar el año del copyright de forma dinámica
-document.addEventListener("DOMContentLoaded", () => {
-  const yearSpan = document.getElementById("year");
-  const currentYear = new Date().getFullYear();
-  yearSpan.textContent = currentYear;
-});
