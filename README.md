@@ -111,6 +111,7 @@ La paleta principal (aplicada en portada, navegación y pie de página) es:
 * **Privacidad:** Se utilizaron avatares generados con IA, imágenes intervenidas digitalmente e ilustraciones en lugar de fotografías personales sin editar, con el objetivo de resguardar la identidad de los integrantes.
   
 ---
+
 <br/>
 
 ## ⚙️ JavaScript: Interactividad Dinámica
@@ -122,60 +123,91 @@ Se implementaron distintas funcionalidades con JavaScript para mejorar la intera
 Aplicadas en la portada principal (`index.html`) y compartidas en todas las páginas del sitio:
 
 * **Simulador de Diagnóstico (Sección Hero - Portada):**  
-  Al hacer clic en el botón "Ejecutar Diagnóstico" se ejecuta una animación que simula comandos de terminal. El contenido se muestra progresivamente utilizando `setTimeout`, generando un efecto de escritura progresivo en pantalla. Durante la ejecución, el botón se desactiva temporalmente.
+  Al hacer clic en el botón "Ejecutar Diagnóstico" se ejecuta una animación que simula comandos de terminal. El contenido se muestra progresivamente utilizando `setTimeout`, generando un efecto de escritura en pantalla. Durante la ejecución, el botón se desactiva temporalmente.
+
+  <p align="center">
+    <img src="./img/readme-img/func-diagnostico.gif" alt="Diagnóstico" width="550">
+  </p>
+
 * **Menú Móvil (Header - Global):**  
   Se implementa un menú hamburguesa para pantallas con resoluciones menores a 768px. Al interactuar, se alternan clases CSS para mostrar u ocultar la navegación.
-* **Copyright Dinámico (Footer - Global):**  
-  El año del pie de página se calcula y actualiza automáticamente, en tiempo real, mediante el uso de `Date().getFullYear()`, evitando modificaciones manuales.
 
-*(Agregar capturas de pantalla)*  
-`![Diagnóstico](./img/captura-diagnostico.png)`  
-`![Menú móvil](./img/captura-menu.png)`
+  <p align="center">
+    <img src="./img/readme-img/func-menu-hamburguesa.gif" alt="Menú móvil" width="550">
+  </p>
+
+* **Copyright Dinámico (Footer - Global):**  
+  El año del pie de página se calcula y actualiza automáticamente en tiempo real mediante el uso de `Date().getFullYear()`, evitando modificaciones manuales.
+
+  <p align="center">
+    <img src="./img/readme-img/func-año.png" alt="Copyright Dinámico" width="550">
+  </p>
+
+---
 
 ### 2. Páginas Individuales
 
 #### Perfil Mariana (`peliculas.js`)
 
-* **Galería Dinámica (Sección: Películas Favoritas):**
-Al hacer clic en un póster, se actualiza dinámicamente un contenedor principal con información de la película (título, director, sinopsis y tráiler). Los datos se obtienen desde atributos `data-*`, evitando la carga simultánea de múltiples iframes de YouTube y mejorando el rendimiento.
+* **Galería Dinámica (Sección: Películas Favoritas):**  
+  Al hacer clic en un póster, se actualiza dinámicamente un contenedor principal con información de la película (título, director, sinopsis y tráiler). Los datos se obtienen desde atributos `data-*`, evitando la carga simultánea de múltiples iframes de YouTube y mejorando el rendimiento.
 
-*(Agregar captura de pantalla)*  
-`![Galería Mariana](./img/captura-mariana.png)`
+  <p align="center">
+    <img src="./img/readme-img/func-galeria.gif" alt="Galería Mariana" width="550">
+  </p>
+
+---
 
 #### Perfiles Mario, Mike y Valeria (`script-mario.js`)
 
-* **Texto Expandible (Sección: Películas favoritas):**  
-  Cada tarjeta de película permite mostrar u ocultar contenido adicional mediante botones "Leer más" / "Leer menos". La funcionalidad alterna clases CSS (`parrafo-resumido` / `parrafo-completo`) para expandir o contraer el texto, manteniendo una interfaz ordenada y limpia.
+*(Funcionalidad reutilizada en múltiples perfiles)*
 
-*(Agregar captura de pantalla)*  
-`![Párrafos Expandibles Mario](./img/captura-mario-expandible.png)`
+* **Texto Expandible (Sección: Películas favoritas):**  
+  Cada tarjeta de película permite mostrar u ocultar contenido adicional mediante botones "Leer más" / "Leer menos". La funcionalidad alterna clases CSS (`parrafo-resumido` / `parrafo-completo`) para expandir o contraer el texto, manteniendo una interfaz ordenada y clara.
+
+  <p align="center">
+    <img src="./img/readme-img/func-expandible-mario.gif" alt="Párrafos Expandibles" width="550">
+  </p>
+
+---
 
 #### Perfil Valeria (`carrusel.js`)
 
 * **Carrusel de contenido (Sección: Discos favoritos):**  
   Se implementa un slider horizontal que permite navegar entre elementos. El desplazamiento se realiza mediante `translateX`, y el script ajusta automáticamente la cantidad de elementos visibles según el tamaño de la pantalla (`window.innerWidth`).
 
-*(Agregar captura de pantalla)*  
-`![Carrusel Valeria](./img/captura-valeria-carrusel.png)`
+  <p align="center">
+    <img src="./img/readme-img/func-carrousel.gif" alt="Carrusel Valeria" width="550">
+  </p>
+
+---
 
 #### Perfil Mike (`mike-ds.js`)
 
 * **Simulación interactiva (Sección: Habilidades):**  
-  Al interactuar con el contenedor, se ejecuta una animación que simula una consulta a una base de datos y refuerza la temática del sitio mediante contenido dinámico.
+  Al interactuar con el contenedor, se ejecuta una animación que simula una consulta a una base de datos, reforzando la temática del perfil mediante contenido dinámico.
 
-*(Agregar captura de pantalla)*  
-`![Consola Mike](./img/captura-mike-ds.png)`
+  <p align="center">
+    <img src="./img/readme-img/func-consulta-mike.gif" alt="Consola Mike" width="550">
+  </p>
+
+---
 
 #### Perfil Raquel (`script-raquel.js`)
-- **ScrollSpy (Navegación interna):**  
+
+* **ScrollSpy (Navegación interna):**  
   A medida que el usuario hace scroll por la página, el menú de navegación secundario se actualiza, resaltando automáticamente la sección que está visible en pantalla. Esto se logra utilizando `IntersectionObserver`, que detecta qué bloque del contenido está activo en cada momento.
 
-- **Botón de copiar URL (Sección: Sobre mí):**  
- Se incluye un botón que permite copiar el enlace del perfil al portapapeles usando `navigator.clipboard`. Al hacer clic, el botón muestra un mensaje temporal ("¡Enlace copiado!") para indicar que la acción se realizó correctamente.
+  <p align="center">
+    <img src="./img/readme-img/func-scroll.gif" alt="ScrollSpy Raquel" width="550">
+  </p>
 
-*(Agregar capturas de pantalla)*  
-`![ScrollSpy Raquel](./img/readme/func-scroll-raquel.gif)`  
-`![Copiar URL Raquel](./img/readme/func-copiar-raquel.gif)`
+* **Botón de copiar URL (Sección: Sobre mí):**  
+  Se incluye un botón que permite copiar el enlace del perfil al portapapeles usando `navigator.clipboard`. Al hacer clic, el botón muestra un mensaje temporal ("¡Enlace copiado!") para indicar que la acción se realizó correctamente.
+
+  <p align="center">
+    <img src="./img/readme-img/func-copiar-url.gif" alt="Copiar URL Raquel" width="550">
+  </p>
 
 ---
 
