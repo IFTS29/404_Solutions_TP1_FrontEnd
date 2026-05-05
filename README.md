@@ -67,6 +67,7 @@ La organización del proyecto cumple con las buenas prácticas de separación de
 │   ├── mike-ds.js          # Lógica de consola interactiva (Perfil Mike)
 │   ├── peliculas.js        # Lógica de galería dinámica (Perfil Mariana - sección películas)
 │   └── script-mario.js     # Lógica de lectura expansible (Perfiles Mario, Mike, Valeria)
+│   └── script-raquel.js     # Lógica de ScrollSpy y copiado de URL (Perfil Raquel)
 │
 └── img/                    # Carpeta que almacena avatares, iconos e ilustraciones
 ```
@@ -164,6 +165,17 @@ Al hacer clic en un póster, se actualiza dinámicamente un contenedor principal
 
 *(Agregar captura de pantalla)*  
 `![Consola Mike](./img/captura-mike-ds.png)`
+
+#### Perfil Raquel (`script-raquel.js`)
+- **ScrollSpy (Navegación interna):**  
+  A medida que el usuario hace scroll por la página, el menú de navegación secundario se actualiza, resaltando automáticamente la sección que está visible en pantalla. Esto se logra utilizando `IntersectionObserver`, que detecta qué bloque del contenido está activo en cada momento.
+
+- **Botón de copiar URL (Sección: Sobre mí):**  
+ Se incluye un botón que permite copiar el enlace del perfil al portapapeles usando `navigator.clipboard`. Al hacer clic, el botón muestra un mensaje temporal ("¡Enlace copiado!") para indicar que la acción se realizó correctamente.
+
+*(Agregar capturas de pantalla)*  
+`![ScrollSpy Raquel](./img/readme/func-scroll-raquel.gif)`  
+`![Copiar URL Raquel](./img/readme/func-copiar-raquel.gif)`
 
 ---
 
