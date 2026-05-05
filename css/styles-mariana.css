@@ -263,6 +263,11 @@
   animation: blink 1s step-end infinite;
 }
 
+.skills-terminal--learning {
+  grid-template-columns: repeat(2, auto);
+  justify-content: center;
+}
+
 @media (max-width: 600px) {
   .texto-completo {
     display: none;
@@ -510,6 +515,17 @@
   .discos-favoritos {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .skills-terminal {
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: start;
+  }
+
+  .skills-terminal--learning {
+    grid-template-columns: repeat(4, auto);
+    justify-content: start;
+  }
+  
 }
 
 @media (min-width: 900px) {
@@ -520,6 +536,7 @@
     align-items: center;
   }
 
+
   .info-personal-basica {
     align-items: flex-start;
     margin-top: 15px;
@@ -527,6 +544,11 @@
 
   .skills-terminal {
     grid-template-columns: repeat(4, 1fr);
+    justify-content: start;
+  }
+
+  .skills-terminal--learning {
+    grid-template-columns: repeat(4, auto);
     justify-content: start;
   }
 
@@ -574,4 +596,6 @@
   .discos-favoritos {
     gap: 20px;
   }
+
+  
 }
